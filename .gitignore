@@ -1,0 +1,5 @@
+venv
+*.pyc
+db.sqlite3
+local_settings.py
+apiai_views.py
