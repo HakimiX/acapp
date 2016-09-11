@@ -43,7 +43,7 @@ greeetings=['Hey', 'hey', 'hi','Hi', 'Hello', 'hello','Whats up']
 
 
 def home(request):
-   return HttpResponse("I am in the home page and everything is just too fine")
+   return HttpResponse("I am in the home page")
 
 
 #this function defines the webhook

@@ -11,7 +11,7 @@ ai=apiai.ApiAI('0ff73c1acdaa4de09e64c512dc1bbba5')
 res = requests.get('http://demoac.azurewebsites.net/FoodSearch/GetFoods').json()
 
 def home(request):
-   return HttpResponse("I am in the home page and everything is just too fine")
+   return HttpResponse("I am in the home page")
 
 @csrf_exempt
 def apiai_webhook(request):
@@ -159,4 +159,3 @@ def getResults(sample):
     results['button_title']='Hotel Website'
 
     return results
-
