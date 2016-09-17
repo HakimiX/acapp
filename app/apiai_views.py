@@ -8,7 +8,7 @@ import random
 import apiai
 
 ai=apiai.ApiAI('0ff73c1acdaa4de09e64c512dc1bbba5')
-res = requests.get('http://demoac.azurewebsites.net/FoodSearch/GetFoods').json()
+res = requests.get('http://allecarte.azurewebsites.net/FoodSearch/GetFoods').json()
 
 def home(request):
    return HttpResponse("I am in the home page")
@@ -143,7 +143,7 @@ def getResults(sample):
     if sample['BaseImageURL']==None:
         results['image_url'] = 'http://www.isabegovhotel.com/images/HOTEL/hotel/hotel/IMG_7135.jpg'
     else:
-        results['image_url'] = 'http://demoac.azurewebsites.net/' + str(sample['BaseImageURL'])
+        results['image_url'] = 'http://allecarte.azurewebsites.net/' + str(sample['BaseImageURL'])
 
 
 
@@ -152,9 +152,9 @@ def getResults(sample):
     results['button_url'] = sample['RestaurantInfo'][0]['WebPage']
 
     if results['item_url']==None:
-        results['item_url']='http://demoac.azurewebsites.net'
+        results['item_url']='http://allecarte.azurewebsites.net'
     if results['button_url'] ==None:
-        results['button_url']='http://demoac.azurewebsites.net'
+        results['button_url']='http://allecarte.azurewebsites.net'
 
     results['button_title']='Hotel Website'
 
