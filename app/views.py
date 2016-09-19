@@ -154,8 +154,8 @@ def sendChile(recipient):
     messenger.send(request)
 
     #message2 = messages.Message(attachment=attachment)
-    request = messages.MessageRequest(recipient, message2)
-    messenger.send(request)
+    #request = messages.MessageRequest(recipient, message2)
+    #messenger.send(request)
 
 #this function sends a Carousel to  facebook
 
