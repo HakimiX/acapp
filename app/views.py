@@ -38,7 +38,7 @@ messenger=MessengerClient('EAAX0hWUCaMcBANvFrF3y2YBP0rgrISZB2PeBwTxbJPOA3NaxZByn
 # a list of greeetings
 
 greeetings=['Hey', 'hey', 'hi','Hi', 'Hello', 'hello','Whats up']
-chile=['chile' 'vegan in chile', 'vegan in Chile','Vegan in Chile','Vegan in chile','Chile','Santiago', 'santiago']
+chile=['chile','vegan in chile', 'vegan in Chile','Vegan in Chile','Vegan in chile','Chile','Santiago', 'santiago']
 
 #cities=['copenhagen', 'Copenhagen', 'Aalborg', 'aalborg', 'Mimice', 'mimice', 'Dunakeszi', 'dunakeszi', 'Aarhus', 'aarhus', 'København', 'københavn', 'Budapest', 'budapest']
 
