@@ -80,8 +80,8 @@ def webhook(request):
             print('received a message')
             message=messagingEvent[0]['message']['text']
 
-            if message in chile:
-                sendChile(recipient)
+            if message in greeetings:
+                sendWelcome(recipient)
             else:
                 call_apiai(message, recipient)
 
