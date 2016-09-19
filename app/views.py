@@ -80,7 +80,7 @@ def webhook(request):
             print('received a message')
             message=messagingEvent[0]['message']['text']
 
-            if message in greeetings:
+            if message in chile:
                 sendChile(recipient)
             else:
                 call_apiai(message, recipient)
@@ -145,7 +145,7 @@ def sendWelcome(recipient):
     request = messages.MessageRequest(recipient, message2)
     messenger.send(request)
 
-#Chile & Santiago easter EAAX0hWUCaMcBANvFrF3y2YBP0rgrISZB2PeBwTxbJPOA3NaxZBynHZB8RxmIVbfQVOcZCNCjLCoy2dka2TH5VaNOT9Sc2utTSi3mOHAK84GQDY5rN9mrnqatShrP5nJedwXz5ILly7ZBUHhi0HrhjfBL44kstGxukal7vdrxriwZDZD
+#Chile & Santiago easter egg
 def sendChile(recipient):
     msg="chile"
     #attachment=attachments.ImageAttachment(url='https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAcwAAAAJGM1OGE5YmJkLTg2ZTUtNGE3Yi05OTg3LWRlZjhlZmViYzUwZg.png')
