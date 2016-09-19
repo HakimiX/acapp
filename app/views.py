@@ -145,14 +145,15 @@ def sendWelcome(recipient):
     request = messages.MessageRequest(recipient, message2)
     messenger.send(request)
 
+#Chile & Santiago easter EAAX0hWUCaMcBANvFrF3y2YBP0rgrISZB2PeBwTxbJPOA3NaxZBynHZB8RxmIVbfQVOcZCNCjLCoy2dka2TH5VaNOT9Sc2utTSi3mOHAK84GQDY5rN9mrnqatShrP5nJedwXz5ILly7ZBUHhi0HrhjfBL44kstGxukal7vdrxriwZDZD
 def sendChile(recipient):
     msg="chile"
-    attachment=attachments.ImageAttachment(url='https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAcwAAAAJGM1OGE5YmJkLTg2ZTUtNGE3Yi05OTg3LWRlZjhlZmViYzUwZg.png')
+    #attachment=attachments.ImageAttachment(url='https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAcwAAAAJGM1OGE5YmJkLTg2ZTUtNGE3Yi05OTg3LWRlZjhlZmViYzUwZg.png')
     message1=messages.Message(text=msg)
     request=messages.MessageRequest(recipient, message1)
     messenger.send(request)
 
-    message2 = messages.Message(attachment=attachment)
+    #message2 = messages.Message(attachment=attachment)
     request = messages.MessageRequest(recipient, message2)
     messenger.send(request)
 
