@@ -38,6 +38,7 @@ messenger=MessengerClient('EAAX0hWUCaMcBANvFrF3y2YBP0rgrISZB2PeBwTxbJPOA3NaxZByn
 # a list of greeetings
 
 greeetings=['Hey', 'hey', 'hi','Hi', 'Hello', 'hello','Whats up']
+chile=['chile','Chile','Santiago', 'santiago']
 
 #cities=['copenhagen', 'Copenhagen', 'Aalborg', 'aalborg', 'Mimice', 'mimice', 'Dunakeszi', 'dunakeszi', 'Aarhus', 'aarhus', 'København', 'københavn', 'Budapest', 'budapest']
 
@@ -80,7 +81,7 @@ def webhook(request):
             message=messagingEvent[0]['message']['text']
 
             if message in greeetings:
-                sendWelcome(recipient)
+                sendChile(recipient)
             else:
                 call_apiai(message, recipient)
 
@@ -135,6 +136,17 @@ def sendMessage(recipient, msg):
 #this function sends a welcome
 def sendWelcome(recipient):
     msg="Welcome to Alle Carte! My name is Liam and I will help you find the perfect meal for you today! How can I help you?"
+    attachment=attachments.ImageAttachment(url='https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAcwAAAAJGM1OGE5YmJkLTg2ZTUtNGE3Yi05OTg3LWRlZjhlZmViYzUwZg.png')
+    message1=messages.Message(text=msg)
+    request=messages.MessageRequest(recipient, message1)
+    messenger.send(request)
+
+    message2 = messages.Message(attachment=attachment)
+    request = messages.MessageRequest(recipient, message2)
+    messenger.send(request)
+
+def sendChile(recipient):
+    msg="chile"
     attachment=attachments.ImageAttachment(url='https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAcwAAAAJGM1OGE5YmJkLTg2ZTUtNGE3Yi05OTg3LWRlZjhlZmViYzUwZg.png')
     message1=messages.Message(text=msg)
     request=messages.MessageRequest(recipient, message1)
