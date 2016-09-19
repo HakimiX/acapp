@@ -134,7 +134,7 @@ def sendMessage(recipient, msg):
 
 #this function sends a welcome
 def sendWelcome(recipient):
-    msg="Welcome to Alle Carte, a platform to connect like minded people and to easily find restaurant meals that fit your needs"
+    msg="Welcome to Alle Carte, my name is Liam and I will help you to find the perfect meal for you today! How can I help you?"
     attachment=attachments.ImageAttachment(url='https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAcwAAAAJGM1OGE5YmJkLTg2ZTUtNGE3Yi05OTg3LWRlZjhlZmViYzUwZg.png')
     message1=messages.Message(text=msg)
     request=messages.MessageRequest(recipient, message1)
