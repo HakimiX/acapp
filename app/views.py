@@ -82,6 +82,8 @@ def webhook(request):
 
             if message in greeetings:
                 sendWelcome(recipient)
+            if message in chile:
+                sendChile(recipient)    
             else:
                 call_apiai(message, recipient)
 
