@@ -147,7 +147,7 @@ def sendWelcome(recipient):
     #request = messages.MessageRequest(recipient, message2)
     #messenger.send(request)
 
-#Chile & Santiago easter egg
+#Chile & Santiago easter egg - demo
 def sendChile(recipient):
     msg="chile"
     message1=messages.Message(text=msg)
