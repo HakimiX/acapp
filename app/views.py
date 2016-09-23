@@ -38,7 +38,7 @@ messenger=MessengerClient('EAACpqvXnT7wBAJiLE2V7l0cgCxGDZCr4MG3Uwr5xC00845oCYqNk
 # a list of greeetings
 
 greeetings=['Hey', 'hey', 'hi','Hi', 'Hello', 'hello','Whats up']
-#chile=['chile','vegan in chile', 'vegan in Chile','Vegan in Chile','Vegan in chile','Chile','Santiago', 'santiago']
+chile=['chile','vegan in chile', 'vegan in Chile','Vegan in Chile','Vegan in chile','Chile','Santiago', 'santiago']
 
 #cities=['copenhagen', 'Copenhagen', 'Aalborg', 'aalborg', 'Mimice', 'mimice', 'Dunakeszi', 'dunakeszi', 'Aarhus', 'aarhus', 'København', 'københavn', 'Budapest', 'budapest']
 
@@ -82,6 +82,8 @@ def webhook(request):
 
             if message in greeetings:
                 sendWelcome(recipient)
+            if message in chile:
+                sendChile(recipient)
             else:
                 call_apiai(message, recipient)
 
@@ -142,11 +144,11 @@ def sendWelcome(recipient):
 
 
 #Chile & Santiago easter egg - demo demo
-#def sendChile(recipient):
-#    msg="chile"
-#    message1=messages.Message(text=msg)
-#    request=messages.MessageRequest(recipient, message1)
-#    messenger.send(request)
+def sendChile(recipient):
+    msg="Unfortunately, I cannot provide information about meals in Chile at the moment :(. From 2017 February I will hopefully know more about that location in first hand :) Try and search for meals in Aalborg or Copenhagen, so you can get a sneak peak to what I will be capable of!"
+    message1=messages.Message(text=msg)
+    request=messages.MessageRequest(recipient, message1)
+    messenger.send(request)
 
 
 #this function sends a Carousel to  facebook
