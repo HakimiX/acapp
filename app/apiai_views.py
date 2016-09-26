@@ -38,13 +38,18 @@ def sendCarousel(city):
     all_elements=[]
     for element in data:
         element_title=element['title']
+        element_redirect_url='https://www.facebook.com'
         postback_button ={
             "type": "postback",
             "title":"Show Restaurant",
             "payload":element_title
         }
+        web_button = elements.WebUrlButton(
+            title='Show More',
+            url='https://www.facebook.com'
+        )
 
-        buttons=[postback_button]
+        buttons=[postback_button, web_button]
 
         current_element={
             "title": element['title'],

@@ -160,13 +160,19 @@ def sendCarousel(recipient, data):
         element_subtitle=element['subtitle']
         element_item_url=element['item_url']
         element_image_url=element['image_url']
+        element_redirect_url='https://www.facebook.com'
 
         postback_button = elements.PostbackButton(
             title='Show Restaurant',
             payload=element_title
         )
 
-        buttons=[postback_button]
+        web_button = elements.WebUrlButton(
+            title='Show More',
+            url='https://www.facebook.com'
+        )
+
+        buttons=[postback_button, web_button]
         element_buttons=buttons
 
         current_element=elements.Element(
