@@ -39,6 +39,7 @@ messenger=MessengerClient('EAACpqvXnT7wBAJiLE2V7l0cgCxGDZCr4MG3Uwr5xC00845oCYqNk
 
 greeetings=['Hey', 'hey', 'hi','Hi', 'Hello', 'hello','Whats up']
 chile=['chile','vegan in chile', 'vegan in Chile','Vegan in Chile','Vegan in chile','Chile','Santiago', 'santiago']
+finish=['bye', 'Bye', 'Thank you', 'thank you', 'Okay', 'okay','ok','Ok','alright','Alright','see you','See you']
 
 #cities=['copenhagen', 'Copenhagen', 'Aalborg', 'aalborg', 'Mimice', 'mimice', 'Dunakeszi', 'dunakeszi', 'Aarhus', 'aarhus', 'København', 'københavn', 'Budapest', 'budapest']
 
@@ -84,6 +85,9 @@ def webhook(request):
                 sendWelcome(recipient)
             if message in chile:
                 sendChile(recipient)
+            if message in finish:
+                sendMessage(recipient,
+                            'I hope that i could help you! Remember that you have a choice! See you :)')
             else:
                 call_apiai(message, recipient)
 
@@ -122,6 +126,10 @@ def call_apiai(mes, recipient):
             sendMessage(recipient,
                         'You did not enter a foodtype :(. But here are some general results!')
             data = generateSamples()
+
+        elif parameters['foodtype'] is not '' and parameters['City'] == '':
+            sendMessage(recipient,
+                        'Unfortunately, there are no matches for your criteria yet. :( Try around Copenhagen and Aalborg.')
 
     if data is '' or len(data)==0:
         sendMessage(recipient, 'Please enter a food type in a city!')
