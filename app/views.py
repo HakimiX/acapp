@@ -127,7 +127,7 @@ def call_apiai(mes, recipient):
                         'You did not enter a foodtype :(. But here are some general results!')
             data = generateSamples()
 
-        elif parameters['foodtype'] is not '' and parameters['City'] == '':
+        elif parameters['foodtype'] == '' and parameters['City'] == '':
             sendMessage(recipient,
                         'Unfortunately, there are no matches for your criteria yet. :( Try around Copenhagen and Aalborg.')
 
