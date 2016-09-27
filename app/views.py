@@ -154,6 +154,10 @@ def sendChile(recipient):
 #this function sends a Carousel to  facebook
 
 def sendCarousel(recipient, data):
+
+    sendMessage(recipient,
+                'Here are 5 of the meals that fit to your wish')
+
     all_elements=[]
     for element in data:
         element_title=element['title']
